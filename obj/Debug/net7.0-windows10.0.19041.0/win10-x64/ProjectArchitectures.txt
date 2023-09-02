@@ -1,0 +1,1 @@
+D:\Breno Artur\MB\diceroller\DiceRoller\DiceRoller\DiceRoller.csproj;x64
