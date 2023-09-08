@@ -1,14 +1,44 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="DiceRoller.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DiceRoller"
-    Shell.FlyoutBehavior="Disabled">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            BackgroundColor="White"
+            HeightRequest="1028"
+            >
 
-</Shell>
+
+            <Label/>
+
+            <Label
+                Text="ROLADOR DE DADOS"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="48"
+                FontFamily="verdana"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                TextColor="Black"/>
+
+            <Label/>
+            <Label/>
+            
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label x:Name="NumeroAleatorioLabel" FontSize="96" HorizontalOptions="Center" TextColor="Black"/>
+                <Label/>
+                <Label/>
+                <Label/>
+                <Label/>
+                <Button Text="ROLAR O DADO" BackgroundColor="DimGray" TextColor="White" Clicked="GerarNumeroAleatorio_Click" WidthRequest="190 "/>
+            </StackLayout>
+
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
