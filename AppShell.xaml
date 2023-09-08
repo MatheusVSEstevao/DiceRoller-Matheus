@@ -22,7 +22,10 @@
                 FontFamily="verdana"
                 HorizontalTextAlignment="Center"
                 HorizontalOptions="Center"
-                TextColor="Black"/>
+                TextColor="Black"
+                MinimumWidthRequest="300"
+                WidthRequest="250"/>
+            
 
             <Label/>
             <Label/>
@@ -30,9 +33,22 @@
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <Label x:Name="NumeroAleatorioLabel" FontSize="96" HorizontalOptions="Center" TextColor="Black"/>
                 <Label/>
+                
+                <StackLayout>
+                    <Picker x:Name="Lados" TitleColor="Black" Title="Quantidade de lados" BackgroundColor="WhiteSmoke" TextColor="Black"  >
+                        <Picker.Items>
+                            <x:String>4</x:String>
+                            <x:String>6</x:String>
+                            <x:String>10</x:String>
+                            <x:String>20</x:String>
+                            <x:String>100</x:String>
+                        </Picker.Items>
+                    </Picker>
+                   
+                </StackLayout>
                 <Label/>
                 <Label/>
-                <Label/>
+                
                 <Button Text="ROLAR O DADO" BackgroundColor="DimGray" TextColor="White" Clicked="GerarNumeroAleatorio_Click" WidthRequest="190 "/>
             </StackLayout>
 
